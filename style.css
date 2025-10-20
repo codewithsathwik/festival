@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+    --bg-color: #222222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: white;
+
+}
+
+iframe {
+    border: none;
+}
+
+.load-container,
+.page-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+    flex-direction: column;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-container {
+    position: relative;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    background-color: darkgrey;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #fff;
+    outline: none;
+    border: none;
+    color: #1a1a1a;
+    box-shadow: 0 0 50px -9px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    background-color: white;
+
+    box-shadow: 0 0 50px -9px rgba(255, 255, 255, 0.9);
+}
+
+form label {
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.enter-form,
+.load-animation {
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.load-animation {
+    z-index: 40;
+}
+
+form {
+    border: 1px solid #fff;
+    border-style: dashed;
+    /* border-radius: 5px; */
+    padding: 20px;
+}
+
+#submit {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(229, 173, 83);
+    box-shadow: 0 0 25px -9px rgba(255, 255, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+#submit:hover {
+    background-color: rgb(255, 157, 0);
+    box-shadow: 0 0 25px -9px rgba(237, 178, 51, 0.9);
+}
+
+#note {
+    margin-top: 25px;
+    max-width: 80vw;
+    text-align: justify;
+    font-size: small;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-container h1 {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    transform: translateX(-100px);
+
+}
+
+.main-container h1 span {
+    display: inline-block;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    transform: translateX(200px);
+
+
+}
+
+.main-container h1,
+.main-container span {
+    font-size: 50px;
+    opacity: 0;
+    color: orange;
+}
+
+
+.main-container {
+    background-color: var(--bg-color);
+    position: relative;
+    top: 0;
+    right: 0;
+    /* z-index: 50; */
+    min-height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container #crackers {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.2;
+    position: fixed;
+    top: -40vh;
+}
+
+.main-container #lamp {
+    opacity: 0;
+    /* animation: fade-lamp 4s ease 0.5s 1 normal forwards; */
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.ani-slide-right {
+    animation: slide-right 3s ease 0.5s 1 normal forwards;
+}
+
+
+
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.ani-slide-left {
+    animation: slide-left 3s ease 0.5s 1 normal forwards;
+}
+
+
+
+@keyframes fade-lamp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ani-fade {
+    animation: fade-lamp 3s ease 0.5s 1 normal forwards;
+}
+
+#msg h2 {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    opacity: 0;
+    color: orange;
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+    #msg h2 {
+        font-size: 50px;
+    }
+    
+    .main-container h1,
+    .main-container span {
+        font-size: 40px;
+    }
+}
+
