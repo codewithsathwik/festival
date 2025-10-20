@@ -255,26 +255,50 @@ form {
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px;
+    font-size: 35px;
     opacity: 0;
     color: orange;
 }
 
 
+#msg div {
+    width: 50vw;
+    text-align: start;
+    padding: 5px;
+    border: 1px solid white;
+    border-style: dotted;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+#msg div p{
+    color: orange;
+}
+
 
 
 @media screen and (max-width: 600px) {
     #msg h2 {
-        font-size: 50px;
+        font-size: 25px;
     }
 
     .main-container h1,
     .main-container span {
-        font-size: 40px;
+        font-size: 35px;
     }
-}
 
-@media (max-width: 600px) {
+    #msg div {
+        width: 80vw;
+    }
+
+    #msg div p {
+        font-size:13px;
+    }
+
     .page-container {
         width: 100vw;
         min-width: 100vw;
