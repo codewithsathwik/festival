@@ -273,7 +273,8 @@ form {
     margin-top: 10px;
     border-radius: 3px;
 }
-#msg div p{
+
+#msg div p {
     color: orange;
 }
 
@@ -294,7 +295,7 @@ form {
     }
 
     #msg div p {
-        font-size:13px;
+        font-size: 13px;
     }
 
     .page-container {
@@ -302,7 +303,17 @@ form {
         min-width: 100vw;
         border-radius: 0;
     }
+
+    .page-container,
+    .main-container,
+    .enter-form,
+    .load-animation,
+    .load-container {
+        min-height: 100dvh;
+    }
+
 }
+
 .hidden {
     display: none;
 }
