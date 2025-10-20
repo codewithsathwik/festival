@@ -40,6 +40,7 @@ window.addEventListener("load", () => {
             loadAnimation.classList.remove("hidden");
         }
         loadAnimation.classList.add("hidden");
+        h1.style.display = "block";
         h1.classList.add("ani-slide-right");
         year.classList.add("ani-slide-left");
         lamp.classList.add("ani-fade");

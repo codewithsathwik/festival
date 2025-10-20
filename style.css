@@ -151,7 +151,7 @@ form {
     font-weight: 400;
     font-style: normal;
     transform: translateX(-100px);
-
+    display: none;
 }
 
 .main-container h1 span {
@@ -169,6 +169,7 @@ form {
     font-size: 50px;
     opacity: 0;
     color: orange;
+
 }
 
 
