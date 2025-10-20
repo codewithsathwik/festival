@@ -1,7 +1,9 @@
 let btnSubmit = document.querySelector("#submit");
 let nameEle = document.querySelector("#name");
 let msg = document.querySelector("#msg");
-let msgDiv = document.querySelector("#msg div");
+let msgDiv1 = document.querySelector("#msg div");
+let msgDiv2 = document.querySelector(".thank-msg1");
+let msgDiv3 = document.querySelector(".thank-msg2");
 let loadContainer = document.querySelector(".load-container");
 let namePage = document.querySelector(".enter-form");
 let loadAnimation = document.querySelector(".load-animation");
@@ -67,9 +69,14 @@ function addMessage(name) {
     setTimeout(() => {
         newName.textContent = name;
         newName.classList.add("ani-fade");
-
     }, 3500)
     setTimeout(() => {
-        msgDiv.classList.add("ani-fade");
+        msgDiv1.classList.add("ani-fade");
     }, 5000)
+    setTimeout(() => {
+        msgDiv2.classList.add("ani-fade");
+    }, 8000)
+    setTimeout(() => {
+        msgDiv3.classList.add("ani-fade");
+    }, 10000)
 }

@@ -259,7 +259,7 @@ form {
 }
 
 
-#msg div {
+#msg div, .thank-msg{
     width: 50vw;
     text-align: start;
     padding: 5px;
@@ -273,11 +273,13 @@ form {
     margin-top: 10px;
     border-radius: 3px;
     opacity: 0;
-}
-
-#msg div p {
     color: orange;
 }
+
+.thank-msg{
+    border: none;
+}
+
 
 
 
@@ -291,11 +293,8 @@ form {
         font-size: 35px;
     }
 
-    #msg div {
+    #msg div,.thank-msg {
         width: 80vw;
-    }
-
-    #msg div p {
         font-size: 13px;
     }
 
@@ -319,3 +318,5 @@ form {
 .hidden {
     display: none;
 }
+
+
