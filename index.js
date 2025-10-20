@@ -46,17 +46,13 @@ window.addEventListener("load", () => {
         addMessage(name)
     }
 
-    function addMessage(name){
-        let newName = document.createElement("h2");
-        newName.textContent = name;
-        newName.classList.add("ani-fade");
-        
+    function addMessage(name) {
+        let newName = document.querySelector("#msg h2");
 
-        setTimeout(() =>{
-            // lamp.classList.add("ani-moveup");
-            // h1.classList.add("ani-moveup");
-            // year.classList.add("ani-moveup");
-            msg.append(newName);
-        },3500)
+        setTimeout(() => {
+
+            newName.textContent = name;
+            newName.classList.add("ani-fade");
+        }, 3500)
     }
 })
