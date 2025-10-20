@@ -26,5 +26,5 @@ A simple and elegant Diwali greeting web page created with HTML and CSS to share
 
 ---
 
-Created by Sathwik M S
+Designed by Sathwik M S
 
