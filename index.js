@@ -4,7 +4,7 @@ let msg = document.querySelector("#msg");
 let loadContainer = document.querySelector(".load-container");
 let namePage = document.querySelector(".enter-form");
 let loadAnimation = document.querySelector(".load-animation");
-
+let mainPage = document.querySelector(".main-container");
 
 // adding animation
 let h1 = document.querySelector(".main-container h1");
@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
         loadAnimation.classList.remove("hidden");
         setTimeout(() => {
             displayMain(personName)
-        }, 5000);
+        }, 5200);
     })
 
 
@@ -40,6 +40,7 @@ window.addEventListener("load", () => {
             loadAnimation.classList.remove("hidden");
         }
         loadAnimation.classList.add("hidden");
+        mainPage.classList.remove("hidden");
         h1.style.display = "block";
         h1.classList.add("ani-slide-right");
         year.classList.add("ani-slide-left");
@@ -49,9 +50,7 @@ window.addEventListener("load", () => {
 
     function addMessage(name) {
         let newName = document.querySelector("#msg h2");
-
         setTimeout(() => {
-
             newName.textContent = name;
             newName.classList.add("ani-fade");
         }, 3500)
