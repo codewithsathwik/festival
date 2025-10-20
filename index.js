@@ -1,6 +1,7 @@
 let btnSubmit = document.querySelector("#submit");
 let nameEle = document.querySelector("#name");
 let msg = document.querySelector("#msg");
+let msgDiv = document.querySelector("#msg div");
 let loadContainer = document.querySelector(".load-container");
 let namePage = document.querySelector(".enter-form");
 let loadAnimation = document.querySelector(".load-animation");
@@ -15,9 +16,20 @@ let crackers = document.querySelector("#crackers");
 window.addEventListener("load", () => {
     loadContainer.classList.add("hidden");
     namePage.classList.remove("hidden");
-    // if(true){
-    //     displayMain();
-    // }
+
+    // accesing the local storage
+    let storedUser = localStorage.getItem('userName');
+    let userName = storedUser ? JSON.parse(storedUser) : null;
+    if (userName && userName.name) {
+        if (namePage) {
+            namePage.classList.add("hidden");
+            loadAnimation.classList.remove("hidden");
+        }
+        setTimeout(() => {
+            displayMain(userName.name);
+            return;
+        }, 5200);
+    }
     //there should be check on local storage
 
     btnSubmit.addEventListener("click", async (event) => {
@@ -26,33 +38,38 @@ window.addEventListener("load", () => {
         let personName = nameEle.value.trim();
         // console.log(personName);
         if (!personName) return;
+
+        // adding to local storage
+        const userName = { name: personName };
+        localStorage.setItem('userName', JSON.stringify(userName));
+
         namePage.classList.add("hidden");
         loadAnimation.classList.remove("hidden");
         setTimeout(() => {
             displayMain(personName)
         }, 5200);
     })
-
-
-    function displayMain(name) {
-        if (namePage) {
-            namePage.classList.add("hidden");
-            loadAnimation.classList.remove("hidden");
-        }
-        loadAnimation.classList.add("hidden");
-        mainPage.classList.remove("hidden");
-        h1.style.display = "block";
-        h1.classList.add("ani-slide-right");
-        year.classList.add("ani-slide-left");
-        lamp.classList.add("ani-fade");
-        addMessage(name)
-    }
-
-    function addMessage(name) {
-        let newName = document.querySelector("#msg h2");
-        setTimeout(() => {
-            newName.textContent = name;
-            newName.classList.add("ani-fade");
-        }, 3500)
-    }
 })
+
+
+function displayMain(name) {
+    loadAnimation.classList.add("hidden");
+    mainPage.classList.remove("hidden");
+    h1.style.display = "block";
+    h1.classList.add("ani-slide-right");
+    year.classList.add("ani-slide-left");
+    lamp.classList.add("ani-fade");
+    addMessage(name)
+}
+
+function addMessage(name) {
+    let newName = document.querySelector("#msg h2");
+    setTimeout(() => {
+        newName.textContent = name;
+        newName.classList.add("ani-fade");
+
+    }, 3500)
+    setTimeout(() => {
+        msgDiv.classList.add("ani-fade");
+    }, 5000)
+}

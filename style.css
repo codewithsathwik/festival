@@ -272,6 +272,7 @@ form {
     gap: 10px;
     margin-top: 10px;
     border-radius: 3px;
+    opacity: 0;
 }
 
 #msg div p {
@@ -308,7 +309,8 @@ form {
     .main-container,
     .enter-form,
     .load-animation,
-    .load-container {
+    .load-container,
+    body {
         min-height: 100dvh;
     }
 
