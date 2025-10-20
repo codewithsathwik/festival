@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
     --bg-color: #222222;
@@ -259,7 +260,8 @@ form {
 }
 
 
-#msg div, .thank-msg{
+#msg div,
+.thank-msg {
     width: 50vw;
     text-align: start;
     padding: 5px;
@@ -276,7 +278,7 @@ form {
     color: orange;
 }
 
-.thank-msg{
+.thank-msg {
     border: none;
     margin-bottom: 10px;
 }
@@ -294,9 +296,14 @@ form {
         font-size: 35px;
     }
 
-    #msg div,.thank-msg {
+    #msg div,
+    .thank-msg {
         width: 80vw;
         font-size: 13px;
+    }
+
+    #lamp {
+        margin-top: 65px;
     }
 
     .page-container {
@@ -320,4 +327,32 @@ form {
     display: none;
 }
 
+#footer a::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-image: url("/assets/min.png");
+    background-size: 15px 15px;
+    display: inline-block;
+    position: absolute;
+    right: -20px;
+    top: 4px;
 
+
+}
+
+#footer a {
+    text-decoration: underline;
+    color: orange;
+}
+
+#footer {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    margin: auto;
+    /* width: 50vw; */
+}
